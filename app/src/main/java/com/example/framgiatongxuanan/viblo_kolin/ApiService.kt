@@ -9,5 +9,5 @@ import retrofit2.http.GET
  */
 interface ApiService {
     @GET("android/jsonarray/")
-    fun androidVersion(): Observable<List<AndroidVersion>>
+    fun getAndroidVersion(): Observable<List<AndroidVersion>>
 }
