@@ -3,7 +3,6 @@ package com.example.framgiatongxuanan.viblo_kolin.features.androidversion
 /**
  * Created by FRAMGIA\tong.xuan.an on 08/01/2018.
  */
-import android.util.Log
 import com.example.framgiatongxuanan.viblo_kolin.Constants
 import okhttp3.Interceptor
 import retrofit2.Retrofit
@@ -22,6 +21,7 @@ class Repository {
         fun <S> createService(serviceClass: Class<S>): S {
             return createService(serviceClass, null)
         }
+
         fun <S> createService(serviceClass: Class<S>, authToken: Map<String, String>?): S {
             if (authToken != null) {
                 var interceptor = AuthenticationInterceptor(authToken!!)
@@ -32,7 +32,6 @@ class Repository {
                 }
             }
             retrofit = builder.build()
-            Log.e("createService", "createService")
             return retrofit!!.create(serviceClass)
         }
 
