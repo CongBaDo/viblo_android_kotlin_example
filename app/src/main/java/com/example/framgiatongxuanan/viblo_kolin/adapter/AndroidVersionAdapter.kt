@@ -18,7 +18,6 @@ class AndroidVersionAdapter(private val androidVersionList: List<AndroidVersion>
     }
 
     override fun getItemCount() = androidVersionList.count()
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(androidVersionList[position])
     }

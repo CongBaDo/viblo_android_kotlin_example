@@ -37,6 +37,7 @@ class Repository {
 
     }
 
+    //định nghĩa headers của request nếu có
     class AuthenticationInterceptor(private val authToken: Map<String, String>) : Interceptor {
         override fun intercept(chain: Interceptor.Chain): Response {
             val original = chain.request()
