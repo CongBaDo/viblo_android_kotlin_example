@@ -1,5 +1,6 @@
 package com.example.framgiatongxuanan.viblo_kolin.features.androidversion
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -10,6 +11,7 @@ import com.example.framgiatongxuanan.viblo_kolin.ApiService
 import com.example.framgiatongxuanan.viblo_kolin.R
 import com.example.framgiatongxuanan.viblo_kolin.adapter.AndroidVersionAdapter
 import com.example.framgiatongxuanan.viblo_kolin.data.local.AndroidVersion
+import com.example.framgiatongxuanan.viblo_kolin.features.CountNumber.CountNumberActivity
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_android_version.*
@@ -25,7 +27,9 @@ class ListAndroidVersionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_android_version)
         initRecyclerView()
         requestAndroidVersion()
+        handlerBtnClick()
     }
+
     // khởi tao recyclerview
     private fun initRecyclerView() {
         rv_android_list.setHasFixedSize(true)
@@ -61,5 +65,12 @@ class ListAndroidVersionActivity : AppCompatActivity() {
     private fun handlerErrorAndroidVersion(error: Throwable) {
         Log.e(TAG, "handlerErrorAndroidVersion: ${error.localizedMessage}")
         Toast.makeText(this, "Error ${error.localizedMessage}", Toast.LENGTH_SHORT).show()
+    }
+
+    //btn click
+    fun handlerBtnClick() {
+        button.setOnClickListener {
+            startActivity(Intent(this, CountNumberActivity::class.java))
+        }
     }
 }
