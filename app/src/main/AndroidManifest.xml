@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.framgiatongxuanan.viblo_kolin">
+    package="com.example.framgiatongxuanan.viblokolin">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
@@ -8,13 +8,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".features.androidversion.ListAndroidVersionActivity">
+        <activity android:name="com.example.framgiatongxuanan.viblokolin.features.androidversion.ListAndroidVersionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"></action>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
-        <activity android:name=".features.CountNumber.CountNumberActivity"></activity>
+        <activity android:name="com.example.framgiatongxuanan.viblokolin.features.CountNumber.CountNumberActivity"></activity>
 
     </application>
 

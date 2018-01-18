@@ -1,6 +1,6 @@
-package com.example.framgiatongxuanan.viblo_kolin
+package com.example.framgiatongxuanan.viblokolin
 
-import com.example.framgiatongxuanan.viblo_kolin.data.local.AndroidVersion
+import com.example.framgiatongxuanan.viblokolin.data.local.AndroidVersion
 import io.reactivex.Observable
 import retrofit2.http.GET
 

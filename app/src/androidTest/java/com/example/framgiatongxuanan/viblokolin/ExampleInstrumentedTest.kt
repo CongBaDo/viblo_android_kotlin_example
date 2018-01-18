@@ -1,4 +1,4 @@
-package com.example.framgiatongxuanan.viblo_kolin
+package com.example.framgiatongxuanan.viblokolin
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

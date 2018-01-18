@@ -1,4 +1,4 @@
-package com.example.framgiatongxuanan.viblo_kolin.features.CountNumber
+package com.example.framgiatongxuanan.viblokolin.features.CountNumber
 
 import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.Observer
@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
-import com.example.framgiatongxuanan.viblo_kolin.R
+import com.example.framgiatongxuanan.viblokolin.R
 import kotlinx.android.synthetic.main.count_number.*
 
 /**

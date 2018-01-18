@@ -1,9 +1,9 @@
-package com.example.framgiatongxuanan.viblo_kolin.features.androidversion
+package com.example.framgiatongxuanan.viblokolin.features.androidversion
 
 /**
  * Created by FRAMGIA\tong.xuan.an on 08/01/2018.
  */
-import com.example.framgiatongxuanan.viblo_kolin.Constants
+import com.example.framgiatongxuanan.viblokolin.Constants
 import okhttp3.Interceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

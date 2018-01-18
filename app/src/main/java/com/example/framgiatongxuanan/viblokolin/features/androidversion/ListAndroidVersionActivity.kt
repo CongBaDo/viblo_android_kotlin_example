@@ -1,4 +1,4 @@
-package com.example.framgiatongxuanan.viblo_kolin.features.androidversion
+package com.example.framgiatongxuanan.viblokolin.features.androidversion
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,11 +7,11 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.widget.Toast
-import com.example.framgiatongxuanan.viblo_kolin.ApiService
-import com.example.framgiatongxuanan.viblo_kolin.R
-import com.example.framgiatongxuanan.viblo_kolin.adapter.AndroidVersionAdapter
-import com.example.framgiatongxuanan.viblo_kolin.data.local.AndroidVersion
-import com.example.framgiatongxuanan.viblo_kolin.features.CountNumber.CountNumberActivity
+import com.example.framgiatongxuanan.viblokolin.ApiService
+import com.example.framgiatongxuanan.viblokolin.R
+import com.example.framgiatongxuanan.viblokolin.adapter.AndroidVersionAdapter
+import com.example.framgiatongxuanan.viblokolin.data.local.AndroidVersion
+import com.example.framgiatongxuanan.viblokolin.features.CountNumber.CountNumberActivity
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_android_version.*

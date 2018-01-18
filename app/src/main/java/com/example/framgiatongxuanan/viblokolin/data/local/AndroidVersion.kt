@@ -1,4 +1,4 @@
-package com.example.framgiatongxuanan.viblo_kolin.data.local
+package com.example.framgiatongxuanan.viblokolin.data.local
 
 /**
  * Created by FRAMGIA\tong.xuan.an on 08/01/2018.
