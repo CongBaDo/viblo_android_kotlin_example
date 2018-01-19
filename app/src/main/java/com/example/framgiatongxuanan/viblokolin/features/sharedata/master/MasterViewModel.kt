@@ -7,14 +7,19 @@ import android.arch.lifecycle.MutableLiveData
 /**
  * Created by FRAMGIA\tong.xuan.an on 18/01/2018.
  */
-public class MasterViewModel(application: Application) : AndroidViewModel(application) {
+class MasterViewModel(application: Application) : AndroidViewModel(application) {
+    init {
+        initData()
+    }
+
     private val mData = MutableLiveData<List<String>>()
     private val mSelectedItem = MutableLiveData<String>()
     fun getData(): MutableLiveData<List<String>> {
         return mData
     }
-    fun initData():List<String>{
-        var result=ArrayList<String>()
+
+   private fun initData(): List<String> {
+        var result = ArrayList<String>()
         result.add("Susanna Mcmillian")
         result.add("Cheryl Stockman")
         result.add("Jesus Pitts")
@@ -35,7 +40,7 @@ public class MasterViewModel(application: Application) : AndroidViewModel(applic
         result.add("Hilario Schreffler")
         result.add("Shanda Eadie")
         result.add("Londa Shelnutt")
-        return  result
+        return result
     }
 
     fun getSelectedItem(): MutableLiveData<String> {

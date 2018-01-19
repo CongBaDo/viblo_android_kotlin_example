@@ -1,36 +1,33 @@
 package com.example.framgiatongxuanan.viblokolin.features.sharedata.master
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.framgiatongxuanan.viblokolin.base.BaseSelectionListAdapter
+import com.example.framgiatongxuanan.viblokolin.features.sharedata.master.MasterAdapter.ItemViewHolder
 
 
 /**
  * Created by FRAMGIA\tong.xuan.an on 18/01/2018.
  */
-class MasterAdapter(private val mContext: Context, private val listener: (String) -> Unit) : BaseSelectionListAdapter<> {
-
-
-    class ViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
-        private val textView: TextView = itemView?.findViewById(android.R.id.text1) as TextView
-        fun bind(name: String) {
-            textView.text = name
-        }
+class MasterAdapter(private val mContext: Context, private val listener: (Int, String) -> Unit)
+    : BaseSelectionListAdapter<String, ItemViewHolder>(listener) {
+    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ItemViewHolder {
+        val view = LayoutInflater.from(parent?.context).inflate(android.R.layout.simple_list_item_1, parent, false);
+        return ItemViewHolder(view, listener)
     }
 
-    fun <T : RecyclerView.ViewHolder> T.listen(event: (position: Int, type: Int) -> Unit): T {
-        itemView.setOnClickListener {
-            event.invoke(getAdapterPosition(), getItemViewType())
+    inner class ItemViewHolder(view: View,
+                               itemClickListener: (Int, String) -> Unit) : BaseRecyclerViewHolder<String>(view,
+            itemClickListener) {
+        override fun bind(model: String, isSelected: Boolean) {
+            with(itemView) {
+                var txt1: TextView = android.R.id.text1 as TextView
+                txt1.text = model
+            }
+
         }
-        return this
-    }
-
-    inner class ItemViewHodel(view: View, itemClickListener: (Int, String) -> Unit)
-        : BaseSelectionListAdapter.BaseRecyclerViewHolder<String>(view, itemClickListener) {
-
     }
 }

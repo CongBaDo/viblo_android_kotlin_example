@@ -7,7 +7,7 @@ import android.view.View
  * Created by ltquang on 11/9/17.
  */
 abstract class BaseSelectionListAdapter<in T, VH>(
-        private val mItemClickListener: ((Int, T) -> Unit)? = null)
+        private val mItemClickListener: (Int, String) -> Unit )
     : RecyclerView.Adapter<VH>() where VH : BaseSelectionListAdapter<T, VH>.BaseRecyclerViewHolder<T> {
 
     private val mDataSource = mutableListOf<T>()
