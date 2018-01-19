@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.example.framgiatongxuanan.viblokolin.features.androidversion.ListAndroidVersionActivity">
+
+        </activity>
+        <activity android:name="com.example.framgiatongxuanan.viblokolin.features.CountNumber.CountNumberActivity"></activity>
+        <activity android:name=".features.sharedata.ShareDataActivity"></activity>
+        <activity android:name=".features.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"></action>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
-        <activity android:name="com.example.framgiatongxuanan.viblokolin.features.CountNumber.CountNumberActivity"></activity>
-        <activity android:name=".features.sharedata.ShareDataActivity"></activity>
     </application>
 
 </manifest>
