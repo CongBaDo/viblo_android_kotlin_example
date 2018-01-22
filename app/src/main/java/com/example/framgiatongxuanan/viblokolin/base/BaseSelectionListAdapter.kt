@@ -1,6 +1,7 @@
 package com.example.framgiatongxuanan.viblokolin.base
 
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.View
 
 /**
@@ -19,7 +20,10 @@ abstract class BaseSelectionListAdapter<in T, VH>(
         holder.fetchData(mDataSource[position], position == mCurrentPosition)
     }
 
-    override fun getItemCount(): Int = mDataSource.size
+    override fun getItemCount(): Int {
+        Log.e("getItemCount: ",mDataSource.size.toString())
+     return   mDataSource.size
+    }
 
     fun updateData(dataSource: List<T>) {
         clearSelection()

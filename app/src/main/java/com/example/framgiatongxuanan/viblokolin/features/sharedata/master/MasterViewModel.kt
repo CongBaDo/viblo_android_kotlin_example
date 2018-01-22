@@ -3,6 +3,7 @@ package com.example.framgiatongxuanan.viblokolin.features.sharedata.master
 import android.app.Application
 import android.arch.lifecycle.AndroidViewModel
 import android.arch.lifecycle.MutableLiveData
+import android.util.Log
 
 /**
  * Created by FRAMGIA\tong.xuan.an on 18/01/2018.
@@ -15,10 +16,11 @@ class MasterViewModel(application: Application) : AndroidViewModel(application) 
     private val mData = MutableLiveData<List<String>>()
     private val mSelectedItem = MutableLiveData<String>()
     fun getData(): MutableLiveData<List<String>> {
+        mData.value = initData()
         return mData
     }
 
-   private fun initData(): List<String> {
+    private fun initData(): List<String> {
         var result = ArrayList<String>()
         result.add("Susanna Mcmillian")
         result.add("Cheryl Stockman")
@@ -40,6 +42,7 @@ class MasterViewModel(application: Application) : AndroidViewModel(application) 
         result.add("Hilario Schreffler")
         result.add("Shanda Eadie")
         result.add("Londa Shelnutt")
+        Log.e("initData", "" + result.size.toString())
         return result
     }
 

@@ -8,11 +8,12 @@ import android.graphics.drawable.ClipDrawable.VERTICAL
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.DividerItemDecoration
+import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.framgiatongxuanan.viblokolin.R
-import kotlinx.android.synthetic.main.activity_share_data.*
 import kotlinx.android.synthetic.main.fragment_master.*
 
 /**
@@ -21,17 +22,9 @@ import kotlinx.android.synthetic.main.fragment_master.*
 class MasterFragment : Fragment(), LifecycleOwner {
     private var mViewModel: MasterViewModel? = null
     private val mAdapter: MasterAdapter by lazy {
-        MasterAdapter(context, { positon, string ->
-            mAdapter.updateSelectedItem(positon)
+        MasterAdapter(context, { position, string ->
+            mAdapter.updateSelectedItem(position)
             mViewModel?.setSelectedItem(string)
-        })
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        mViewModel = ViewModelProviders.of(activity).get(MasterViewModel::class.java)
-        mViewModel!!.getData().observe(this, Observer<List<String>> { t ->
-            t?.let { mAdapter?.updateData(it) }
         })
     }
 
@@ -42,12 +35,21 @@ class MasterFragment : Fragment(), LifecycleOwner {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
+
     }
 
     private fun initView() {
-        val dividerItemDecoration = DividerItemDecoration(recyclerview.context, VERTICAL)
+        recyclerview.layoutManager = LinearLayoutManager(context)
+//        val dividerItemDecoration = DividerItemDecoration(recyclerview.context, VERTICAL)
         recyclerview.adapter = mAdapter
-        recyclerview.addItemDecoration(dividerItemDecoration)
+        mViewModel = ViewModelProviders.of(activity).get(MasterViewModel::class.java)
+        mViewModel?.getData()?.observe(this, Observer<List<String>> { t ->
+            t?.also {
+                Log.e("updateData", "" + t.size)
+                mAdapter?.updateData(it)
+            }
+        })
+        //  recyclerview.addItemDecoration(dividerItemDecoration)
     }
 
 }

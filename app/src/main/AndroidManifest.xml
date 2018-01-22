@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.framgiatongxuanan.viblokolin.features.androidversion.ListAndroidVersionActivity">
+        <activity android:name=".features.androidversion.ListAndroidVersionActivity" />
+        <activity android:name=".features.countnumber.CountNumberActivity"></activity>
+        <activity android:name=".features.sharedata.ShareDataActivity">
 
         </activity>
-        <activity android:name="com.example.framgiatongxuanan.viblokolin.features.CountNumber.CountNumberActivity"></activity>
-        <activity android:name=".features.sharedata.ShareDataActivity"></activity>
         <activity android:name=".features.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"></action>

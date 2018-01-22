@@ -10,24 +10,25 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintGuide_percent="0.45"
+        app:layout_constraintGuide_percent="0.5"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <fragment
+    <LinearLayout
         android:id="@+id/fragment_master"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#0d0"
+        android:background="@android:color/background_light"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <fragment
+    <LinearLayout
         android:id="@+id/fragment_detail"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#030"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guideline3"

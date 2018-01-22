@@ -15,7 +15,7 @@ class ShareDataActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_share_data)
-//        supportFragmentManager.beginTransaction().replace(R.id.fragment_master, MasterFragment(), "master").commit()
-//        supportFragmentManager.beginTransaction().replace(R.id.fragment_detail, DetailFragment(), "detail").commit()
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_master, MasterFragment(), "master").commit()
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_detail, DetailFragment(), "detail").commit()
     }
 }

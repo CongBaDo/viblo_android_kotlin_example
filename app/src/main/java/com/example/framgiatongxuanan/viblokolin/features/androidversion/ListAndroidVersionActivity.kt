@@ -11,7 +11,7 @@ import com.example.framgiatongxuanan.viblokolin.ApiService
 import com.example.framgiatongxuanan.viblokolin.R
 import com.example.framgiatongxuanan.viblokolin.adapter.AndroidVersionAdapter
 import com.example.framgiatongxuanan.viblokolin.data.local.AndroidVersion
-import com.example.framgiatongxuanan.viblokolin.features.CountNumber.CountNumberActivity
+import com.example.framgiatongxuanan.viblokolin.features.countnumber.CountNumberActivity
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_android_version.*

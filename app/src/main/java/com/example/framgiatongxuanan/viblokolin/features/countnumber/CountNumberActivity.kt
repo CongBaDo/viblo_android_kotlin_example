@@ -1,4 +1,4 @@
-package com.example.framgiatongxuanan.viblokolin.features.CountNumber
+package com.example.framgiatongxuanan.viblokolin.features.countnumber
 
 import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.Observer

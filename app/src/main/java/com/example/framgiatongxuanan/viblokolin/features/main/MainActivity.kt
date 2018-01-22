@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.example.framgiatongxuanan.viblokolin.R
 import com.example.framgiatongxuanan.viblokolin.data.local.AndroidVersion
-import com.example.framgiatongxuanan.viblokolin.features.CountNumber.CountNumberActivity
+import com.example.framgiatongxuanan.viblokolin.features.androidversion.ListAndroidVersionActivity
+import com.example.framgiatongxuanan.viblokolin.features.countnumber.CountNumberActivity
 import com.example.framgiatongxuanan.viblokolin.features.sharedata.ShareDataActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when (p0?.id) {
             R.id.btnAndroidVersion -> {
-                startActivity(Intent(this, AndroidVersion::class.java))
+                startActivity(Intent(this, ListAndroidVersionActivity::class.java))
             }
             R.id.btnCountNumber -> {
                 startActivity(Intent(this, CountNumberActivity::class.java))

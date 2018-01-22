@@ -1,4 +1,4 @@
-package com.example.framgiatongxuanan.viblokolin.features.CountNumber
+package com.example.framgiatongxuanan.viblokolin.features.countnumber
 
 import android.app.Application
 import android.arch.lifecycle.AndroidViewModel
